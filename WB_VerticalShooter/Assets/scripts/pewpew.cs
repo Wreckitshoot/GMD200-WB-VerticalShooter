@@ -27,7 +27,7 @@ public class pewpew : MonoBehaviour
     private void shoot()
     {
         //shoot pew
-        GameObject Pew = Instantiate(PewPewPrefab, transform.position, Quaternion.identity);
+        GameObject Pew = Instantiate(PewPewPrefab, transform.position+ transform.up, transform.rotation);
         Rigidbody2D PewRB = Pew.GetComponent<Rigidbody2D>();
         PewRB.velocity = transform.up * PewSpeed;
         Destroy(PewRB.gameObject, 2.0f);
