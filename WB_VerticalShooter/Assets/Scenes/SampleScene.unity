@@ -123,39 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &78265153 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5887263257533587174, guid: a541e861b4ec8fd428e3e9239623df9c, type: 3}
-  m_PrefabInstance: {fileID: 90152505}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &78265159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 78265153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fffc743f061e544eb19729060cfbde1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreboard: {fileID: 995976436}
-  score: 0
---- !u!114 &78265160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 78265153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1d0a6e284ddbea4cb2cedc458a0e440, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: {fileID: 267302564}
-  targetTime: 60
 --- !u!1001 &90152505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -211,13 +178,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5887263257533587174, guid: a541e861b4ec8fd428e3e9239623df9c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 78265159}
-    - targetCorrespondingSourceObject: {fileID: 5887263257533587174, guid: a541e861b4ec8fd428e3e9239623df9c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 78265160}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a541e861b4ec8fd428e3e9239623df9c, type: 3}
 --- !u!1 &112829092
 GameObject:
@@ -249,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7361614a862834f80abb7b421cb102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 78265159}
+  score: {fileID: 1206994868}
   PointValue: -1
   point_prefab: {fileID: 6306387882535399363, guid: dae5e80fbfa1c9a418ab8c5876dc8991, type: 3}
 --- !u!61 &112829094
@@ -342,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7361614a862834f80abb7b421cb102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 78265159}
+  score: {fileID: 1206994868}
   PointValue: 3
   point_prefab: {fileID: 6306387882535399363, guid: dae5e80fbfa1c9a418ab8c5876dc8991, type: 3}
 --- !u!61 &145459010
@@ -634,7 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7361614a862834f80abb7b421cb102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 78265159}
+  score: {fileID: 1206994868}
   PointValue: 3
   point_prefab: {fileID: 6306387882535399363, guid: dae5e80fbfa1c9a418ab8c5876dc8991, type: 3}
 --- !u!61 &430528682
@@ -1334,6 +1295,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1206994866}
+  - component: {fileID: 1206994868}
+  - component: {fileID: 1206994867}
+  - component: {fileID: 1206994869}
   m_Layer: 0
   m_Name: DATASAVER
   m_TagString: Untagged
@@ -1356,6 +1320,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1206994867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206994865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d0a6e284ddbea4cb2cedc458a0e440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 267302564}
+  targetTime: 60
+--- !u!114 &1206994868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206994865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fffc743f061e544eb19729060cfbde1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreboard: {fileID: 995976436}
+  score: 0
+--- !u!114 &1206994869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206994865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21720fa94dba9c44a91d38201a2d8356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1294127061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1516,7 +1520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7361614a862834f80abb7b421cb102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 78265159}
+  score: {fileID: 1206994868}
   PointValue: 2
   point_prefab: {fileID: 6306387882535399363, guid: dae5e80fbfa1c9a418ab8c5876dc8991, type: 3}
 --- !u!61 &1781658259
@@ -1609,7 +1613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7361614a862834f80abb7b421cb102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 78265159}
+  score: {fileID: 1206994868}
   PointValue: 2
   point_prefab: {fileID: 6306387882535399363, guid: dae5e80fbfa1c9a418ab8c5876dc8991, type: 3}
 --- !u!61 &1987607499
@@ -1702,7 +1706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7361614a862834f80abb7b421cb102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 78265159}
+  score: {fileID: 1206994868}
   PointValue: 1
   point_prefab: {fileID: 6306387882535399363, guid: dae5e80fbfa1c9a418ab8c5876dc8991, type: 3}
 --- !u!61 &2033275390
@@ -1795,7 +1799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7361614a862834f80abb7b421cb102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 78265159}
+  score: {fileID: 1206994868}
   PointValue: 1
   point_prefab: {fileID: 6306387882535399363, guid: dae5e80fbfa1c9a418ab8c5876dc8991, type: 3}
 --- !u!61 &2070320995
@@ -1928,9 +1932,9 @@ SceneRoots:
   - {fileID: 112829095}
   - {fileID: 1987607500}
   - {fileID: 145459011}
-  - {fileID: 2070320996}
   - {fileID: 1781658260}
   - {fileID: 430528683}
+  - {fileID: 2070320996}
   - {fileID: 2033275391}
   - {fileID: 90152505}
   - {fileID: 424258560}
