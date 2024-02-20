@@ -13,6 +13,7 @@ public class Enemy_respawn : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             score.score += PointValue;
+            EndscreenScore.setScore(PointValue);
             Instantiate(point_prefab,transform.position,transform.rotation);
             other.gameObject.GetComponent<Enemy>().Respawn();
         }
